@@ -5,9 +5,9 @@ const path    = require('path');
 const fs      = require('fs');
 
 const app  = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -147,5 +147,13 @@ app.get('/api/users/:id/favorites', (req, res) => {
   const list = db.favorites.filter(f => f.user_id === uid).map(f => db.recipes.find(r => r.id === f.recipe_id)).filter(Boolean);
   res.json(list.map(r => withAuthor(r, db)));
 });
-
+const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.get('*', (req, res) => {
+    if (!req.path.startsWith('/api') && !req.path.startsWith('/uploads')) {
+      res.sendFile(path.join(frontendDist, 'index.html'));
+    }
+  });
+}
 app.listen(PORT, () => console.log('Pituquinhas backend rodando em http://localhost:' + PORT));

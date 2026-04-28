@@ -11,6 +11,12 @@
       "name": "Leticia",
       "password": "123456",
       "created_at": "2026-04-28T04:22:21.475Z"
+    },
+    {
+      "id": 3,
+      "name": "Catharina",
+      "password": "123456",
+      "created_at": "2026-04-28T18:50:29.061Z"
     }
   ],
   "recipes": [
@@ -97,12 +103,30 @@
       "servings": "5 porções",
       "image_url": "/uploads/1777350453551-726947276.jpg",
       "created_at": "2026-04-28T04:27:33.557Z"
+    },
+    {
+      "id": 8,
+      "user_id": 3,
+      "title": "Arroz doce",
+      "category": "Doces",
+      "ingredients": "1 xícara de arroz \r\n2 litros de água \r\n2 latas de leite condensado \r\n1 lata de creme de leite \r\n1 gema",
+      "instructions": "Deixe o arroz cozinhando até ficar com pouca água, não deixe secar muito;\r\nRetire uma concha e bata no liquidificador com o creme de leite e a gema;\r\nVolte para a panele, misture e deixe ferver. Adicione o leite condensado e deixe ferver.",
+      "cook_time": "00:50:00",
+      "servings": "1 travessa ",
+      "image_url": "/uploads/1777402844269-348677205.jpg",
+      "created_at": "2026-04-28T19:00:44.305Z"
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 1,
+      "user_id": 3,
+      "recipe_id": 8
+    }
+  ],
   "nextId": {
-    "user": 3,
-    "recipe": 8,
-    "fav": 1
+    "user": 4,
+    "recipe": 9,
+    "fav": 2
   }
 }
