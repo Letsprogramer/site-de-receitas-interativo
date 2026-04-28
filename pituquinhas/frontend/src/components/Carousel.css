@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════
+   CAROUSEL
+   ═══════════════════════════════════ */
+
+.carousel-section {
+  margin-bottom: 48px;
+}
+
+.carousel-title {
+  font-family: var(--font-brand);
+  font-size: 1.5rem;
+  color: var(--brown);
+  margin: 0 28px 20px;
+  position: relative;
+  display: inline-block;
+}
+.carousel-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--green-dark), transparent);
+  border-radius: 2px;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  /* Fade edges */
+  -webkit-mask: linear-gradient(90deg, transparent, black 60px, black calc(100% - 60px), transparent);
+  mask:         linear-gradient(90deg, transparent, black 60px, black calc(100% - 60px), transparent);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  padding: 8px 28px 16px;
+  /* Calcula a largura: cards (200px) + gaps (16px) × count */
+  width: calc((200px + 16px) * var(--count) * 2);
+  animation: scrollCarousel calc(var(--count) * 4s) linear infinite;
+}
+
+/* Pausa no hover */
+.carousel-track:hover {
+  animation-play-state: paused;
+}

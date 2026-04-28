@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Pituquinhas",
+      "password": "admin123",
+      "created_at": "2026-04-28T04:19:57.935Z"
+    },
+    {
+      "id": 2,
+      "name": "Leticia",
+      "password": "123456",
+      "created_at": "2026-04-28T04:22:21.475Z"
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "Feijão Carioquinha",
+      "category": "Comida caseira",
+      "ingredients": "Feijão carioquinha\nAlho\nCebola\nLouro\nSal a gosto",
+      "instructions": "Deixe o feijão de molho por 2 horas.\nCozinhe na pressão por 30 min.\nRefogue o alho e a cebola.\nMisture e tempere.",
+      "cook_time": "00:40:00",
+      "servings": "4 porções",
+      "image_url": null,
+      "created_at": "2026-04-28T04:19:57.937Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "title": "Pudim de Leite",
+      "category": "Doces",
+      "ingredients": "1 lata de leite condensado\n3 ovos\n1 lata de leite",
+      "instructions": "Faça a calda com açúcar na forma.\nBata os ingredientes no liquidificador.\nDespeje na forma.\nAssar em banho-maria por 1h.",
+      "cook_time": "01:00:00",
+      "servings": "6 porções",
+      "image_url": null,
+      "created_at": "2026-04-28T04:19:57.937Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "title": "Bolo de Fubá com Goiabada",
+      "category": "Doces",
+      "ingredients": "2 xícaras de fubá\n3 ovos\n1 xícara de leite\n1 xícara de açúcar\nGoiabada",
+      "instructions": "Misture os ingredientes secos.\nAdicione ovos e leite.\nIntercale com goiabada.\nAsse por 45 min.",
+      "cook_time": "00:45:00",
+      "servings": "8 porções",
+      "image_url": null,
+      "created_at": "2026-04-28T04:19:57.937Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "title": "Pão de Forma Caseiro",
+      "category": "Comida caseira",
+      "ingredients": "4 xícaras de farinha\n1 sachê de fermento\n1 xícara de leite morno\nManteiga\nSal",
+      "instructions": "Dissolva o fermento no leite.\nMisture e sove por 10 min.\nDeixe descansar 1h.\nAsse por 35 min.",
+      "cook_time": "02:00:00",
+      "servings": "10 fatias",
+      "image_url": null,
+      "created_at": "2026-04-28T04:19:57.937Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "title": "Vitamina de Banana",
+      "category": "bebidas",
+      "ingredients": "2 bananas maduras\n1 copo de leite\nMel a gosto",
+      "instructions": "Bata tudo no liquidificador.\nSirva gelado.",
+      "cook_time": "00:05:00",
+      "servings": "2 copos",
+      "image_url": null,
+      "created_at": "2026-04-28T04:19:57.937Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "title": "Coxinha",
+      "category": "salgados",
+      "ingredients": "2 peitos de frango\n3 xícaras de farinha\nCatupiry\nCaldo de frango\nOvo\nFarinha de rosca",
+      "instructions": "Cozinhe e desfie o frango.\nFaça a massa com o caldo.\nRecheie e modele.\nEmpane e frite.",
+      "cook_time": "01:30:00",
+      "servings": "20 unidades",
+      "image_url": null,
+      "created_at": "2026-04-28T04:19:57.937Z"
+    },
+    {
+      "id": 7,
+      "user_id": 2,
+      "title": "Brigadeiro de chocolate",
+      "category": "Doces",
+      "ingredients": "1 cx de leitecodensado\r\n4 colheres de sopa de achocolatado\r\n1 colher de manteiga",
+      "instructions": "adicione a caixinha de leite codensado em uma panela, logo em seguida coloque uma colher de manteiga, mexa bem até dissolver\r\napós dissolver, adicione o chocolatado aos poucos e mexa até engrossar \r\naguarde por 20 minutos até esfriar",
+      "cook_time": ":30:00",
+      "servings": "5 porções",
+      "image_url": "/uploads/1777350453551-726947276.jpg",
+      "created_at": "2026-04-28T04:27:33.557Z"
+    }
+  ],
+  "favorites": [],
+  "nextId": {
+    "user": 3,
+    "recipe": 8,
+    "fav": 1
+  }
+}

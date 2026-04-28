@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════
+   SIMPLE LIST PAGES (MyRecipes, Favorites)
+   ═══════════════════════════════════ */
+
+.simple-page { min-height: 100vh; background: var(--bg); }
+
+.simple-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 28px 60px;
+}
+
+.simple-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.simple-header h1 {
+  font-family: var(--font-brand);
+  font-size: 1.8rem;
+  color: var(--brown);
+}
+
+.btn-add-small {
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: .9rem;
+  font-weight: 800;
+  padding: 9px 20px;
+  border-radius: 50px;
+  transition: background .2s, transform .15s;
+  box-shadow: 0 4px 14px rgba(74,86,48,.35);
+}
+.btn-add-small:hover {
+  background: var(--green);
+  transform: translateY(-2px);
+}
+
+.simple-loading {
+  display: flex; justify-content: center;
+  padding: 60px 0;
+}
+
+.grid-recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Reutilizado do Home.css */
+.empty-state {
+  text-align: center;
+  padding: 70px 0;
+  color: var(--brown-light);
+}
+.empty-state span { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+.empty-state p    { font-size: 1.05rem; font-weight: 600; margin-bottom: 20px; }
+
+.btn-cta {
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: .95rem;
+  font-weight: 800;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background .2s, transform .15s, box-shadow .2s;
+  box-shadow: 0 4px 14px rgba(74,86,48,.35);
+}
+.btn-cta:hover {
+  background: var(--green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(74,86,48,.45);
+}
+
+.loading-spinner {
+  width: 40px; height: 40px;
+  border: 3px solid rgba(110,125,74,.2);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

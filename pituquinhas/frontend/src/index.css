@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════
+   PITUQUINHAS – Global Styles
+   ═══════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Paleta */
+  --bg:           #D4A870;   /* areia caramelo principal */
+  --bg-light:     #E2BF90;   /* areia mais clara */
+  --bg-dark:      #C09258;   /* areia mais escura */
+  --green:        #6E7D4A;   /* verde musgo principal */
+  --green-dark:   #4A5630;   /* verde musgo escuro */
+  --green-light:  #9AAA72;   /* verde claro */
+  --green-muted:  #8A9860;   /* verde médio */
+  --white:        #F8F4EC;   /* off-white bege */
+  --cream:        #F0E8D8;   /* creme */
+  --brown:        #5C3D1E;   /* marrom texto */
+  --brown-light:  #7A5030;
+  --text-on-green:#FFFFFF;
+  --text-dark:    #3D2B1F;
+  --shadow:       0 8px 32px rgba(60,40,10,.18);
+  --shadow-sm:    0 2px 12px rgba(60,40,10,.12);
+  --radius:       16px;
+  --radius-sm:    10px;
+  --radius-xs:    6px;
+
+  /* Fontes */
+  --font-brand:   'Pacifico', cursive;
+  --font-body:    'Nunito', sans-serif;
+
+  /* Transições */
+  --ease:         cubic-bezier(.4,0,.2,1);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+}
+
+input, textarea {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+/* Scroll customizado */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--green-muted); border-radius: 99px; }
+
+/* Animações globais */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes scrollCarousel {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Classe utilitária de animação */
+.fade-in  { animation: fadeIn .45s var(--ease) both; }
+.slide-in { animation: slideIn .4s var(--ease) both; }

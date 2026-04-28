@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════
+   HOME
+   ═══════════════════════════════════ */
+
+.home-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.home-main {
+  padding: 28px 0 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Filtros de categoria */
+.category-filters {
+  display: flex;
+  gap: 10px;
+  padding: 0 28px 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  animation-delay: .1s;
+}
+.category-filters::-webkit-scrollbar { display: none; }
+
+.cat-chip {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: rgba(255,255,255,.2);
+  color: var(--brown);
+  font-size: .88rem;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: all .2s var(--ease);
+}
+.cat-chip:hover {
+  background: rgba(110,125,74,.15);
+  border-color: var(--green-muted);
+}
+.cat-chip.active {
+  background: var(--green-dark);
+  color: var(--white);
+  border-color: var(--green-dark);
+  box-shadow: 0 4px 14px rgba(74,86,48,.35);
+}
+
+/* Loading */
+.home-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 0;
+  color: var(--brown);
+  font-weight: 600;
+}
+.loading-spinner {
+  width: 40px; height: 40px;
+  border: 3px solid rgba(110,125,74,.2);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Seção filtrada */
+.filtered-section {
+  padding: 0 28px;
+}
+.section-title {
+  font-family: var(--font-brand);
+  font-size: 1.4rem;
+  color: var(--brown);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.result-count {
+  font-family: var(--font-body);
+  font-size: .82rem;
+  font-weight: 700;
+  background: var(--green);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.grid-recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--brown-light);
+}
+.empty-state span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+.empty-state p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
